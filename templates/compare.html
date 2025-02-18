@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porovnání verzí dokumentu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Porovnání verzí dokumentu</h1>
+    <h2>{{ document["Název dokumentu"] }}</h2>
+
+    {% if changes %}
+        <pre>{{ changes }}</pre>
+    {% else %}
+        <p>Žádné rozdíly mezi verzemi nebyly nalezeny.</p>
+    {% endif %}
+
+    <a href="/">Zpět na hlavní stránku</a>
+
+</body>
+</html>
